@@ -111,13 +111,15 @@ int main()
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
-    trucks.reserve(2);
+    trucks.reserve(3);
     trucks.emplace_back("dude1");
     trucks.emplace_back("dude2");
+    trucks.emplace_back("al gorp");
 
-    motorcycles.reserve(2);
+    motorcycles.reserve(3);
     motorcycles.emplace_back("biker1");
-    motorcycles.emplace_back("todd"); 
+    motorcycles.emplace_back("todd");
+    motorcycles.emplace_back("jeef"); 
     
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
@@ -133,7 +135,7 @@ int main()
     HighwayPatrol cop;
     cop.scanHighway(&highway);
 
-    std::cout << "done" << std::endl;
+    std::cout << "\ndone\n";
 
     return 0;
 }

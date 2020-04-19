@@ -4,8 +4,6 @@
 #include "SemiTruck.h"
 #include "HighwayPatrol.h"
 
-#include <cassert>
-
 void Highway::changeSpeed( int newSpeed )
 {
     speedLimit = newSpeed;
@@ -40,14 +38,16 @@ void Highway::removeVehicleInternal( Vehicle* v )
 
 void Highway::addVehicle( Vehicle* v )
 {
-    std::cout << "\nAdding: " << v;
+    //std::cout << "\nAdding: " << v;
     vehicles.push_back(v);
     addVehicleInternal(v);
 }
 
 void Highway::removeVehicle( Vehicle* v )
 {
-    vehicles.erase( std::remove(vehicles.begin(), vehicles.end(), v), vehicles.end() );
+    vehicles.erase( std::remove( vehicles.begin(), vehicles.end(), v ), 
+                                 vehicles.end() 
+                );
     removeVehicleInternal(v);
-    std::cout << "Removed: " << v << "\n";
+    //std::cout << "Removed: " << v << "\n";
 }
