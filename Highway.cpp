@@ -6,7 +6,7 @@
 
 #include <cassert>
 
-void Highway::changeSpeed(int newSpeed)
+void Highway::changeSpeed( int newSpeed )
 {
     speedLimit = newSpeed;
     for( auto* vehicle : vehicles )
@@ -15,7 +15,7 @@ void Highway::changeSpeed(int newSpeed)
     }
 }
 
-void Highway::addVehicleInternal(Vehicle* v)
+void Highway::addVehicleInternal( Vehicle* v )
 {
 
     if( auto* c = dynamic_cast< Car* >(v) )        { c->closeWindows(); }
@@ -24,7 +24,7 @@ void Highway::addVehicleInternal(Vehicle* v)
 
 }
 
-void Highway::removeVehicleInternal(Vehicle* v)
+void Highway::removeVehicleInternal( Vehicle* v )
 {
 
     if( auto* c = dynamic_cast< Car* >(v) )        { c->tryToEvade(); }
@@ -40,15 +40,14 @@ void Highway::removeVehicleInternal(Vehicle* v)
 
 void Highway::addVehicle( Vehicle* v )
 {
+    std::cout << "\nAdding: " << v;
     vehicles.push_back(v);
     addVehicleInternal(v);
 }
 
 void Highway::removeVehicle( Vehicle* v )
 {
-    vehicles.erase(std::remove(vehicles.begin(), 
-                               vehicles.end(), 
-                               v), 
-                   vehicles.end());
+    vehicles.erase( std::remove(vehicles.begin(), vehicles.end(), v), vehicles.end() );
     removeVehicleInternal(v);
+    std::cout << "Removed: " << v << "\n";
 }

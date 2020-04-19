@@ -106,8 +106,8 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
-    cars.emplace_back("jam");
-    cars.emplace_back("jardy");
+    cars.emplace_back("jarvis");
+    cars.emplace_back("jawn");
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
@@ -122,11 +122,13 @@ int main()
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
 
-    for( auto c : cars ) { highway.addVehicle( &c ); }
+    for( auto& c : cars ) { highway.addVehicle( &c ); }
 
-    for( auto m : motorcycles ) { highway.addVehicle( &m ); }
+    for( auto& m : motorcycles ) { highway.addVehicle( &m ); }
 
-    for( auto t : trucks ) { highway.addVehicle( &t ); }
+    for( auto& t : trucks ) { highway.addVehicle( &t ); }
+
+    std::cout << "Done adding\n";
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
