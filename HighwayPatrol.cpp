@@ -20,7 +20,7 @@ void HighwayPatrol::scanHighway(Highway* h)
     for( size_t i = h->vehicles.size(); --i >= 0; )
     {
         auto* v = h->vehicles[i];
-        std::cout << "\nAddress of vehicle being pulled over: " << v;
+        std::cout << "\nAddress of vehicle being checked: " << v;
         if( v->speed > h->speedLimit + 5 )
         {
             pullOver(v, v->speed > (h->speedLimit + 15), h );
@@ -41,7 +41,7 @@ void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
         else if( dynamic_cast< SemiTruck* >(v) ) { typeOfVehicle += "SEMI-TRUCK"; }
         else if( dynamic_cast< Motorcycle* >(v) ) { typeOfVehicle += "MOTORBIKE"; }
 
-        std::cout << name << ": YOU IN THE [ " << typeOfVehicle << " ] PULL OVER AND SHOW YOUR HANDS\nEVERYONE ELSE, SLOW DOWN!! \n\n\n";
+        std::cout << name << ": YOU IN THE [ " << typeOfVehicle << " ] PULL OVER AND SHOW YOUR HANDS\nEVERYONE ELSE, SLOW DOWN!! \n\n";
 
         h->removeVehicle(v);
     }

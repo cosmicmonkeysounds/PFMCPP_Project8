@@ -128,7 +128,7 @@ int main()
 
     for( auto& t : trucks ) { highway.addVehicle( &t ); }
 
-    std::cout << "Done adding\n";
+    std::cout << "\n";
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
