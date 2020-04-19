@@ -32,7 +32,7 @@ void HighwayPatrol::scanHighway(Highway* h)
 void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
 {
     std::cout << "\n\n";
-    std::cout << name << ": vehicle is traveling " << v->speed - h->speedLimit << " miles per hour over the speed limit\n";
+    std::cout << name << ": vehicle is traveling " << v->speed - h->speedLimit << " miles per hour over the speed limit\n\n";
     if( willArrest )
     {
         std::string typeOfVehicle = ""; 
