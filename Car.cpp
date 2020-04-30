@@ -15,6 +15,6 @@ void Car::closeWindows()
 
 void Car::tryToEvade()
 {
-    std::cout << name << ": you'll never take me alive, ya dirty coppers!" << std::endl;
-    setSpeed(100);
+    setSpeed(0);
+    std::cout << name << ": hello officer, what seems to be the problem?" << std::endl;
 }

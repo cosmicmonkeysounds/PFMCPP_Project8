@@ -23,7 +23,7 @@ void Motorcycle::setSpeed(int s)
     if( s < 90 )
     {
         //ignore the request to lower the speed
-        std::cout<< name << ": uh, no.  i'm currently lane-splitting and racing" << std::endl;
+        std::cout << "\n" << name << ": uh, no.  i'm currently lane-splitting and racing" << "\n";
     }
     else
     {

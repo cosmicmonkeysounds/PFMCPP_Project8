@@ -9,7 +9,7 @@ struct SemiTruck : public Vehicle
     SemiTruck( const SemiTruck& );
     SemiTruck& operator =( const SemiTruck& );
 
-    void tryToEvade() override;
+    void pullOver();
     void honkHorn();
 };
 
