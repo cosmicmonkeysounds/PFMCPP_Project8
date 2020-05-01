@@ -7,7 +7,7 @@ struct SemiTruck : public Vehicle
     SemiTruck( const std::string& n );
     ~SemiTruck() override;
     SemiTruck( const SemiTruck& );
-    SemiTruck& operator =( const SemiTruck& );
+    SemiTruck& operator=( const SemiTruck& );
 
     void pullOver();
     void honkHorn();

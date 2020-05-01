@@ -4,7 +4,7 @@ Vehicle::~Vehicle() = default;
 
 Vehicle::Vehicle( const Vehicle& ) = default;
 
-Vehicle& Vehicle::operator =( const Vehicle& ) = default;
+Vehicle& Vehicle::operator=( const Vehicle& ) = default;
 
 void Vehicle::setSpeed(int s)
 {

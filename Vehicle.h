@@ -11,7 +11,7 @@ struct Vehicle
     
     virtual ~Vehicle();
     Vehicle( const Vehicle& );
-    Vehicle& operator =( const Vehicle& );
+    Vehicle& operator=( const Vehicle& );
     
     virtual void setSpeed(int s);
     virtual void tryToEvade();
